@@ -32,3 +32,21 @@ class PrescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Prescription
         fields = '_all_'
+
+class WardInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ward
+        fields = ['ward_no', 'floor_no', 'ward_type', 'total_days', 'total_bill', 'booked_date', 'booked_by', 'email']
+
+class CabinInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cabin
+        fields = ['cabin_no', 'floor_no', 'cabin_type', 'total_days', 'total_bill', 'booked_date', 'booked_by', 'email']
+
+class SupportSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Support
+        fields = ['id', 'name', 'phone', 'email', 'message']
+
+
+
